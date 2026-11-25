@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "codex-usage",
+  "version": "1.0.3",
+  "description": "单独提及本插件即可打开 Windows 用量浮窗。",
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true,
+      "interface": {
+        "displayName": "Codex 用量",
+        "shortDescription": "单独提及即可打开桌面用量浮窗。",
+        "longDescription": "单独提及本插件或请求打开用量条时启动浮窗。浮窗关闭后退出。",
+        "category": "Productivity",
+        "capabilities": ["Write"],
+        "defaultPrompt": ["打开用量条"],
+        "brandColor": "#26374F"
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "codex-usage-report",
+  "version": "1.0.0",
+  "description": "按明确的查询请求读取本机 Codex 会话用量。",
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true,
+      "interface": {
+        "displayName": "Codex 用量查询",
+        "shortDescription": "返回本机 Codex 会话的用量数字。",
+        "longDescription": "查询累计 token、缓存命中率和上下文占用。可指定本机会话链接或 UUID。",
+        "category": "Productivity",
+        "capabilities": ["Read"],
+        "defaultPrompt": ["查询最近本机会话的 token 用量"],
+        "brandColor": "#26374F"
+      }
+    }
+  }
+}
